@@ -2,4 +2,91 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* DELETE LATTER */
+  /* outline: 2px solid rebeccapurple; */
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #cb997e;
+}
+
+.h1-text {
+  text-align: center;
+  padding: 2rem;
+  font-size: 52px;
+  font-weight: bold;
+  color: #edede9;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.options-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+  background-color: #d5bdaf;
+  width: 20rem;
+  border-radius: 1rem;
+}
+
+#color-select,
+#bg-color-select {
+  width: 5rem;
+  height: 5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#color-select::-webkit-color-swatch,
+#bg-color-select::-webkit-color-swatch {
+  border-radius: 3rem;
+}
+#color-select::-moz-color-swatch,
+#bg-color-select::-moz-color-swatch {
+  border-radius: 3rem;
+}
+
+h3 {
+  text-align: center;
+}
+
+#range-slider {
+  padding: 0.6rem;
+}
+
+.text {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.range-nr {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.clear-btn {
+  padding: 0.7rem;
+  width: 8rem;
+  height: 3.5rem;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #dda15e;
+  color: #fefae0;
 }
