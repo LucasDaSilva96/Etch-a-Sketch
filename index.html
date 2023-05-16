@@ -9,14 +9,31 @@
     <title>Etch-a-Sketch</title>
   </head>
   <body>
-    <h1 class="h1-text">Etch-a-Sketch</h1>
+    <h1 class="h1-text">Etch A Sketch</h1>
     <main>
       <aside class="options-section">
-        <div class="pen-color-box"></div>
-        <div class="background-color-box"></div>
-        <div class="grid-size-box"></div>
-        <div class="toggle-grid-lines-box"></div>
-        <div class="clear-box"></div>
+        <div class="pen-color-box flex">
+          <div class="pen-color">
+            <input type="color" value="#ffffff" id="color-select" />
+          </div>
+          <label for="color-select" class="text">Pen Color</label>
+        </div>
+        <div class="background-color-box flex">
+          <div class="background-color">
+            <input type="color" value="#000000" id="bg-color-select" />
+          </div>
+          <label for="bg-color-select" class="text">Background Color</label>
+        </div>
+        <div class="grid-size-box flex"></div>
+        <div class="toggle-grid-lines-box">
+          <h3>Grid Size</h3>
+          <input type="range" value="24" min="1" max="60" id="range-slider" />
+          <br />
+          <label for="range-slider" class="range-nr">24 x 24</label>
+        </div>
+        <div class="clear-box flex">
+          <button class="clear-btn">Clear</button>
+        </div>
       </aside>
       <section class="sketch-section">
         <div class="grid-container"></div>
