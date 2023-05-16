@@ -16,7 +16,6 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
 }
 
 .h1-text {
@@ -31,10 +30,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 6rem;
-  width: 50rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 40rem;
   background-color: #d4a373;
-  margin: 1rem 0 0 35%;
   border-radius: 2rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -129,8 +134,11 @@ h3 {
 }
 
 .sketch-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 33rem;
-  width: 50rem;
+  width: 40rem;
   background-color: #d5bdaf;
   padding: 1rem;
   border-radius: 1rem;
@@ -139,7 +147,7 @@ h3 {
 }
 
 .grid-container {
-  width: 48rem;
-  height: 31rem;
+  width: 30rem;
+  height: 30rem;
   background-color: #ffffff;
 }
