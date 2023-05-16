@@ -16,14 +16,27 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-top: 1rem;
 }
 
 .h1-text {
   text-align: center;
   padding: 2rem;
-  font-size: 52px;
+  font-size: 48px;
   font-weight: bold;
   color: #edede9;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  width: 50rem;
+  background-color: #d4a373;
+  margin: 1rem 0 0 35%;
+  border-radius: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .flex {
@@ -129,5 +142,4 @@ h3 {
   width: 48rem;
   height: 31rem;
   background-color: #ffffff;
-  border-radius: 1rem;
 }
