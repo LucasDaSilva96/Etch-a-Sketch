@@ -11,6 +11,13 @@ body {
   background-color: #cb997e;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .h1-text {
   text-align: center;
   padding: 2rem;
@@ -34,7 +41,10 @@ body {
   gap: 2rem;
   background-color: #d5bdaf;
   width: 20rem;
+  height: 33rem;
   border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 #color-select,
@@ -103,4 +113,21 @@ h3 {
 
 #range-slider:hover {
   cursor: pointer;
+}
+
+.sketch-section {
+  height: 33rem;
+  width: 50rem;
+  background-color: #d5bdaf;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.grid-container {
+  width: 48rem;
+  height: 31rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
 }
