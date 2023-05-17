@@ -7,6 +7,9 @@ const pen_color = document.getElementById("color-select");
 const background_color = document.getElementById("bg-color-select");
 const grid_container = document.querySelector(".grid-container");
 
+// General settings
+grid_container.style.backgroundColor = `${background_color.value}`;
+
 // Change the background of the grid-container function
 const change_bg_color = function (div) {
   grid_container.style.backgroundColor = `${div.value}`;
