@@ -157,9 +157,9 @@ h3 {
 }
 
 .cell {
-  background-color: gray;
   width: 1fr;
   height: 1fr;
+  background-color: #d4a373;
 }
 
 footer {
