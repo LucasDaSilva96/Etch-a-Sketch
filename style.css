@@ -156,6 +156,12 @@ h3 {
   background-color: #ffffff;
 }
 
+.cell {
+  background-color: gray;
+  width: 1fr;
+  height: 1fr;
+}
+
 footer {
   margin-top: auto;
   display: flex;
