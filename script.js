@@ -23,7 +23,6 @@ function change_bg_color(div) {
 }
 
 // Add the wanted amount of grid-div function
-
 const choose_nr_of_div = function (gridContainer) {
   const rows = Number(grid_range.value);
   const columns = Number(grid_range.value);
@@ -39,8 +38,17 @@ const choose_nr_of_div = function (gridContainer) {
     }
   }
 };
+
+// Clear the grid container of all the rows and columns function
+const delete_grid_rows_columns = function (gridContainer) {
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild);
+  }
+};
+
 // Display the current grid-value on change
 grid_range.addEventListener("click", function () {
+  delete_grid_rows_columns(grid_container);
   change_grid_size_text(grid_range, grid_range_text);
   choose_nr_of_div(grid_container);
 });
