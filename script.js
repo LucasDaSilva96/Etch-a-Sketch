@@ -38,13 +38,14 @@ const choose_nr_of_div = function (gridContainer) {
     }
   }
 };
+choose_nr_of_div(grid_container);
 
 // Clear the grid container of all the rows and columns function
-const delete_grid_rows_columns = function (gridContainer) {
+function delete_grid_rows_columns(gridContainer) {
   while (gridContainer.firstChild) {
     gridContainer.removeChild(gridContainer.firstChild);
   }
-};
+}
 
 // Display the current grid-value on change
 grid_range.addEventListener("click", function () {
