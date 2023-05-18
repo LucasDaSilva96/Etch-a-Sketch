@@ -52,4 +52,26 @@ grid_range.addEventListener("click", function () {
   delete_grid_rows_columns(grid_container);
   change_grid_size_text(grid_range, grid_range_text);
   choose_nr_of_div(grid_container);
+  draw_pen_color();
+});
+
+let is_mouse_down = false;
+
+// Pen color function
+const draw_pen_color = function () {
+  if (is_mouse_down === true) {
+    grid_container.addEventListener("mouseover", function (e) {
+      e.target.style.backgroundColor = `${pen_color.value}`;
+    });
+  }
+};
+
+grid_container.addEventListener("mousedown", () => {
+  is_mouse_down = true;
+  if (is_mouse_down === true) draw_pen_color();
+});
+
+grid_container.addEventListener("mouseup", () => {
+  is_mouse_down = false;
+  if (is_mouse_down === true) draw_pen_color();
 });
