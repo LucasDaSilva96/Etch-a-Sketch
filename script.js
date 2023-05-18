@@ -6,6 +6,7 @@ const grid_range_text = document.querySelector(".range-nr");
 const pen_color = document.getElementById("color-select");
 const background_color = document.getElementById("bg-color-select");
 const grid_container = document.querySelector(".grid-container");
+const clear_btn = document.querySelector(".clear-btn");
 
 // General settings
 grid_container.style.backgroundColor = `${background_color.value}`;
@@ -17,9 +18,9 @@ const change_grid_size_text = function (gridRange, gridText) {
 change_grid_size_text(grid_range, grid_range_text);
 
 // Change the background of the grid-container function
-const change_bg_color = function (div) {
+function change_bg_color(div) {
   grid_container.style.backgroundColor = `${div.value}`;
-};
+}
 
 // Add the wanted amount of grid-div function
 
