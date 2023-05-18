@@ -10,6 +10,12 @@ const grid_container = document.querySelector(".grid-container");
 // General settings
 grid_container.style.backgroundColor = `${background_color.value}`;
 
+// This function changes the grid size textContent
+const change_grid_size_text = function (gridRange, gridText) {
+  return (gridText.textContent = `${gridRange.value} x ${gridRange.value}`);
+};
+change_grid_size_text(grid_range, grid_range_text);
+
 // Change the background of the grid-container function
 const change_bg_color = function (div) {
   grid_container.style.backgroundColor = `${div.value}`;
@@ -34,6 +40,6 @@ const choose_nr_of_div = function (gridContainer) {
 };
 // Display the current grid-value on change
 grid_range.addEventListener("click", function () {
-  grid_range_text.textContent = `${grid_range.value} x ${grid_range.value}`;
+  change_grid_size_text(grid_range, grid_range_text);
   choose_nr_of_div(grid_container);
 });
