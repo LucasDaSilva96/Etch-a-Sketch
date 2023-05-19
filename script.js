@@ -23,7 +23,7 @@ function change_bg_color(div) {
 }
 
 // Add the wanted amount of grid-div function
-const choose_nr_of_div = function (gridContainer) {
+function choose_nr_of_div(gridContainer) {
   const rows = Number(grid_range.value);
   const columns = Number(grid_range.value);
   gridContainer.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
@@ -37,7 +37,7 @@ const choose_nr_of_div = function (gridContainer) {
       gridContainer.appendChild(cell);
     }
   }
-};
+}
 choose_nr_of_div(grid_container);
 
 // Clear the grid container of all the rows and columns function
@@ -59,6 +59,7 @@ let is_mouse_down = false;
 
 // Pen color function
 const draw_pen_color = function () {
+  background_color.onchange(change_bg_color(background_color));
   grid_container.addEventListener("mouseover", function (e) {
     if (is_mouse_down === true) {
       e.target.style.backgroundColor = `${pen_color.value}`;
@@ -76,9 +77,9 @@ grid_container.addEventListener("click", () => {
   }
 });
 
-// window.addEventListener("mouseup", () => {
-//   is_mouse_down = false;
-// });
+grid_container.addEventListener("mouseleave", function () {
+  is_mouse_down = false;
+});
 
 // The clear sketch function
 clear_btn.addEventListener("click", function () {
