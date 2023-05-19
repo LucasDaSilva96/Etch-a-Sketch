@@ -74,3 +74,11 @@ grid_container.addEventListener("mousedown", () => {
 window.addEventListener("mouseup", () => {
   is_mouse_down = false;
 });
+
+// The clear sketch function
+
+clear_btn.addEventListener("click", function () {
+  grid_container.childNodes.forEach((el) => {
+    el.style.backgroundColor = `${background_color.value}`;
+  });
+});
