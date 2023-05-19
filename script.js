@@ -66,18 +66,23 @@ const draw_pen_color = function () {
   });
 };
 
-grid_container.addEventListener("mousedown", () => {
-  is_mouse_down = true;
-  draw_pen_color();
+grid_container.addEventListener("click", () => {
+  if (is_mouse_down === false) {
+    is_mouse_down = true;
+    return draw_pen_color();
+  }
+  if (is_mouse_down === true) {
+    return (is_mouse_down = false);
+  }
 });
 
-window.addEventListener("mouseup", () => {
-  is_mouse_down = false;
-});
+// window.addEventListener("mouseup", () => {
+//   is_mouse_down = false;
+// });
 
 // The clear sketch function
-
 clear_btn.addEventListener("click", function () {
+  is_mouse_down = false;
   grid_container.childNodes.forEach((el) => {
     el.style.backgroundColor = `${background_color.value}`;
   });
