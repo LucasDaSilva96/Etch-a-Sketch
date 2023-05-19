@@ -159,7 +159,7 @@ h3 {
 .cell {
   width: 1fr;
   height: 1fr;
-  background-color: #d4a373;
+  /* outline: 1px solid red; */
 }
 
 footer {
