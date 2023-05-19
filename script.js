@@ -59,19 +59,18 @@ let is_mouse_down = false;
 
 // Pen color function
 const draw_pen_color = function () {
-  if (is_mouse_down === true) {
-    grid_container.addEventListener("mouseover", function (e) {
+  grid_container.addEventListener("mouseover", function (e) {
+    if (is_mouse_down === true) {
       e.target.style.backgroundColor = `${pen_color.value}`;
-    });
-  }
+    }
+  });
 };
 
 grid_container.addEventListener("mousedown", () => {
   is_mouse_down = true;
-  if (is_mouse_down === true) draw_pen_color();
+  draw_pen_color();
 });
 
-grid_container.addEventListener("mouseup", () => {
+window.addEventListener("mouseup", () => {
   is_mouse_down = false;
-  if (is_mouse_down === true) draw_pen_color();
 });
