@@ -93,6 +93,7 @@ grid_container.addEventListener("mouseleave", function () {
 // The clear sketch function
 clear_btn.addEventListener("click", function () {
   grid_container.childNodes.forEach((el) => {
-    el.style.backgroundColor = `${background_color.value}`;
+    el.style.backgroundColor =
+      getComputedStyle(background_color).getPropertyValue("background-color");
   });
 });
