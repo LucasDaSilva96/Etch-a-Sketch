@@ -62,7 +62,6 @@ let is_mouse_down = false;
 
 // Pen color function
 const draw_pen_color = function () {
-  background_color.onchange(change_bg_color(background_color));
   grid_container.addEventListener("mouseover", function (e) {
     if (is_mouse_down === true) {
       e.target.style.backgroundColor = `${pen_color.value}`;
