@@ -18,9 +18,12 @@ const change_grid_size_text = function (gridRange, gridText) {
 change_grid_size_text(grid_range, grid_range_text);
 
 // Change the background of the grid-container function
-function change_bg_color(div) {
+const change_bg_color = function (div) {
   grid_container.style.backgroundColor = `${div.value}`;
-}
+  grid_container.childNodes.forEach((el) => {
+    el.style.backgroundColor = `${div.value}`;
+  });
+};
 
 // Add the wanted amount of grid-div function
 function choose_nr_of_div(gridContainer) {
@@ -83,7 +86,6 @@ grid_container.addEventListener("mouseleave", function () {
 
 // The clear sketch function
 clear_btn.addEventListener("click", function () {
-  is_mouse_down = false;
   grid_container.childNodes.forEach((el) => {
     el.style.backgroundColor = `${background_color.value}`;
   });
