@@ -17,11 +17,18 @@ const change_grid_size_text = function (gridRange, gridText) {
 };
 change_grid_size_text(grid_range, grid_range_text);
 
-// Change the background of the grid-container function
+// Change the background of the grid-container function, but not in the grids that has pen_color on it
 const change_bg_color = function (div) {
   grid_container.style.backgroundColor = `${div.value}`;
   grid_container.childNodes.forEach((el) => {
-    el.style.backgroundColor = `${div.value}`;
+    let penStyle = getComputedStyle(el);
+    let bgStyle = getComputedStyle(div);
+    if (
+      penStyle.getPropertyValue("background-color") ===
+      bgStyle.getPropertyValue("background_color")
+    ) {
+      el.style.backgroundColor = `${div.value}`;
+    }
   });
 };
 
